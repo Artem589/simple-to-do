@@ -11,20 +11,15 @@ function changeStatus(task, status) {
   return list[task] = status
 }
 
-changeStatus("have a walk", "Done")
-
 // Функция addTask - добавляет новую задачу
 function addTask(task) {
   return list[task] = "To Do"
 }
-addTask("have a walk")
 
 // Функция deleteTask - удаляет задачу
 function deleteTask(task) {
   return delete list[task]
 }
-
-deleteTask("have a walk")
 
 // Функция showList будет выводить весь список дел в виде
 
@@ -53,12 +48,21 @@ function showList() {
 
   if (toDo === listToDo) {
     toDo = listToDo + "-" + "\n"
-  } else if (inProgress === listInProgress) {
+  }  
+  if (inProgress === listInProgress) {
     inProgress = listInProgress + "-" + "\n"
-  } else if (done === listDone) {
+  }  
+  if (done === listDone) {
     done = listDone + "-"
   }
   console.log(toDo + inProgress + done)
 }
 
+
+changeStatus("have a walk", "Done");
+addTask("have a walk");
+deleteTask("have a walk");
+deleteTask("write a post");
+deleteTask("make a bed");
+deleteTask("create a task");
 showList(list)
