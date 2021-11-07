@@ -11,7 +11,7 @@ function changeStatus(task, status) {
   return list[task] = status
 }
 
-changeStatus("have a walk", "Yes")
+changeStatus("have a walk", "Done")
 
 // Функция addTask - добавляет новую задачу
 function addTask(task) {
