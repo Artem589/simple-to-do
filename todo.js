@@ -15,15 +15,16 @@ changeStatus("have a walk", "Yes");
 
 // Функция addTask - добавляет новую задачу
 function addTask(task) {
-  return list[task] = "To Do";
+  return (list[task] = "To Do");
 }
 addTask("have a walk");
 
 // Функция deleteTask - удаляет задачу
 function deleteTask(task) {
-    return delete list[task]
+  return delete list[task];
 }
-deleteTask('have a walk')
+
+deleteTask("have a walk");
 
 // Функция showList будет выводить весь список дел в виде
 
@@ -61,4 +62,3 @@ function showList() {
 }
 
 showList(list);
-
