@@ -1,7 +1,7 @@
 function showVerticalMessage(str) {
   if (!str) {
     console.log("");
-    // return;
+    return;
   }
 
   str = str.slice(0, 10);
