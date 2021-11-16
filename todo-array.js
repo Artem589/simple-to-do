@@ -32,23 +32,16 @@ function addTask(task) {
   });
 }
 
-addTask("buy products");
-
 function changeStatus(task, stat) {
-  let isFilterNames = list.map((item) =>
-    item.name === task ? (item.status = stat) : item
-  );
+  let isFilterNames = list.map((item) => item.name === task ? (item.status = stat) : item);
   return isFilterNames;
 }
-changeStatus("buy products", "TODO");
 
 function deleteTask(task) {
   let index = list.findIndex((item) => item.name === task);
   let isValidIndex = index > -1 ? list.splice(index, 1) : list;
   return isValidIndex;
 }
-
-deleteTask("test");
 
 function showBy(arr) {
   let sortTodo, sortInProgress, sortDone;
@@ -78,9 +71,12 @@ function showBy(arr) {
     }
   });
 
-  if (!sortTodo) {console.log("-")}
+  if (!sortTodo) {console.log("-");}
   if (!sortInProgress) {console.log("-")}
   if (!sortDone) {console.log("-")}
 }
 
+deleteTask("test");
+changeStatus("buy products", "TODO");
+addTask("buy products");
 showBy(list);
