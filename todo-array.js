@@ -33,7 +33,9 @@ function addTask(task) {
 }
 
 function changeStatus(task, stat) {
-  let isFilterNames = list.map((item) => item.name === task ? (item.status = stat) : item);
+  let isFilterNames = list.map((item) =>
+    item.name === task ? (item.status = stat) : item
+  );
   return isFilterNames;
 }
 
@@ -51,32 +53,35 @@ function showBy(arr) {
   arr.filter(function (item) {
     if (item.status === _STATUS_TODO) {
       sortTodo = `${item.name},`;
-      return console.log(sortTodo);
+      console.log(sortTodo);
     }
   });
+   if (!sortTodo) {console.log("-")}
 
   console.log(`${_STATUS_IN_PROGRESS} : `);
   arr.filter(function (item) {
     if (item.status === _STATUS_IN_PROGRESS) {
       sortInProgress = `${item.name},`;
-      return console.log(sortInProgress);
+      console.log(sortInProgress);
     }
   });
+
+  if (!sortInProgress) {console.log("-")}
 
   console.log(`${_STATUS_DONE} : `);
   arr.filter(function (item) {
     if (item.status === _STATUS_DONE) {
       sortDone = `${item.name},`;
-      return console.log(sortDone);
+      console.log(sortDone);
     }
   });
 
-  if (!sortTodo) {console.log("-");}
-  if (!sortInProgress) {console.log("-")}
   if (!sortDone) {console.log("-")}
 }
 
-deleteTask("test");
-changeStatus("buy products", "TODO");
-addTask("buy products");
+// deleteTask("test");
+// changeStatus("buy products", "TODO");
+// addTask("buy products");
 showBy(list);
+
+
