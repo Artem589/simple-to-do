@@ -18,3 +18,6 @@ function showVerticalMessage(str) {
 // showVerticalMessage("");
 showVerticalMessage("марафон");
 // showVerticalMessage("Привет всем!!!");
+
+console.log(func`марафон`);
+// func`марафон`
